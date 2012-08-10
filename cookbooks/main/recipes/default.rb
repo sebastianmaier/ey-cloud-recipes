@@ -68,7 +68,7 @@ require_recipe "mongodb"
 #require_recipe "elasticsearch"
 
 #enable dev libxml2
-require_recipe "lixml_dev"
+require_recipe "libxml_dev"
 
 # To install specific plugins to Elasticsearch see below as an example
 #es_plugin "cloud-aws" do

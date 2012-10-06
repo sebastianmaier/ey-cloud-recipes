@@ -47,7 +47,7 @@ if node[:utility_instances].empty?
       variables(:environment => node[:environment][:framework_env], 
                 :hosts => hosts,
                 :replica_set => replica_set,
-                :mongo_replsetname => node[:environment][:name] )
+                :mongo_replsetname => mongo_app_name )
     end
 
   end

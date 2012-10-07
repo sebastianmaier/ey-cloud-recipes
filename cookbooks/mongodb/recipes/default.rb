@@ -15,7 +15,7 @@ when "i686"
 
 else
   
-  if (@node[:instance_role] == 'util' && @node[:name].match(/mongodb/)) || (@node[:instance_role] == "solo" &&  @node[:mongo_utility_instances].length == 0)
+  if (@node[:instance_role] == 'util' && @node[:name].match(/mongodb/)) || (@node[:instance_role] == "solo" &&  @node[:mongo_utility_instances].length == 0 || (@node[:instance_role] == "app_master" &&  @node[:mongo_utility_instances].length == 0)
     # Chef::Log.info "installing in util with mongo"
     
     require_recipe "mongodb::install"
@@ -37,7 +37,7 @@ else
 end
 
 #install mms on db_master or solo. This will need to change for db-less environments
-if ['db_master', 'solo'].include? @node[:instance_role]
+if ['db_master', 'solo'].include? @node[:instance_role] || (@node[:instance_role] == "app_master" &&  @node[:mongo_utility_instances].length == 0)
   Chef::Log.info "Installing MMS on #{@node[:instance_role]}"
   require_recipe "mongodb::install_mms"
 end

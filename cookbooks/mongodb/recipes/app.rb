@@ -34,7 +34,7 @@ if node[:utility_instances].empty?
 
     #Mongoid.yml_v3
     template "/data/#{mongo_app_name}/shared/config/mongoid.yml" do
-      source "mongoid_v3.yml.erb"
+      source "mongoid_v2.yml.erb"
       owner user[:username]
       group user[:username]
       mode 0755

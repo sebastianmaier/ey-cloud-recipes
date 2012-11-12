@@ -1,18 +1,18 @@
 user = @node[:users].first
+mongodb_bin = "#{@node[:mongo_path]}/bin"
 
 if ['db_master','solo'].include? @node[:instance_role]
-  #for arbiter purposes
+  #under /mnt because it's an arbiter. No data saved
   mongo_data = "/mnt/mongodb/data"
   mongo_log = "/mnt/mongodb/log"
 else
+  #save under /data
   mongo_data = @node[:mongo_base] + "/data"
   mongo_log = @node[:mongo_base] + "/log"
 end
 
-mongo_bin_path = @node[:mongo_path] + "/bin"
-
 execute "expand path to include mongo instalation path" do
-  command "export PATH=\"$PATH\:#{mongo_bin_path}\""
+  command "export PATH=\"$PATH\:#{mongodb_bin}\""
   not_if "echo $PATH | grep mongo"
 end
 
@@ -40,6 +40,15 @@ directory '/var/run/mongodb' do
   recursive true
 end
 
+remote_file "/etc/init.d/mongodb" do
+  source "mongodb.init"
+  owner "root"
+  group "root"
+  mode 0755
+  backup false
+  action :create
+end
+
 remote_file "/etc/logrotate.d/mongodb" do
   owner "root"
   group "root"
@@ -49,7 +58,7 @@ remote_file "/etc/logrotate.d/mongodb" do
   action :create
 end
 
-mongodb_options = { :exec => "#{@node[:mongo_path]}/bin/mongod",
+mongodb_options = { :exec => "#{mongodb_bin}/mongod",
                     :data_path => mongo_data,
                     :log_path => mongo_log,
                     :user => user[:username],
@@ -59,12 +68,20 @@ mongodb_options = { :exec => "#{@node[:mongo_path]}/bin/mongod",
                     :extra_opts => [] }
                     
 if @node[:mongo_journaling]
-  mongodb_options[:extra_opts]  << "--journal"
+  mongodb_options[:extra_opts]  << " --journal"
 end
 
 if @node[:mongo_replset]
-  mongodb_options[:extra_opts]  << "--replSet #{@node[:mongo_replset]}"
+  mongodb_options[:extra_opts]  << " --replSet #{@node[:mongo_replset]}"
 end
+
+if @node[:oplog_size]
+  mongodb_options[:extra_opts]  << " --oplogSize=#{@node[:oplog_size]}"
+end
+
+mongodb_options[:extra_opts]  << " --directoryperdb"
+
+# Chef::Log.info "Node extra_opts #{mongodb_options[:extra_opts]}"
 
 template "/etc/conf.d/mongodb" do
   source "mongodb.conf.erb"
@@ -76,13 +93,14 @@ template "/etc/conf.d/mongodb" do
   })
 end
 
-remote_file "/etc/init.d/mongodb" do
-  source "mongodb.init"
-  owner "root"
-  group "root"
-  mode 0755
-  backup false
-  action :create
+execute "enable-mongodb" do
+  command "rc-update add mongodb default"
+  action :run
+end
+
+execute "/etc/init.d/mongodb restart" do
+  command "/etc/init.d/mongodb restart"
+  action :run
 end
 
 #---- drop backup yml

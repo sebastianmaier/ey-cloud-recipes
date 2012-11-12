@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9a00e465-e667-4730-a35e-6347492bc0ea" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/api-keys-yml/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/collectd/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/mongodb/files/default/mms.monitrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/newrelic_server_monitoring/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/newrelic_server_monitoring/files/default/nrsysmond.monitrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/rds/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/redis-yml/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/redis/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/resque-scheduler/files/default/resque-scheduler" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/shared_db/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/timezone/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/api-keys-yml/recipes/default.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/api-keys-yml/templates/default/api-keys.yml.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/collectd/libraries/collectd.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/collectd/recipes/default.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/custom_haproxy_config/recipes/default.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/elasticsearch/definitions/plugin.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/emerge/recipes/default.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/libxml_dev/recipes/default.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/main/definitions/sysctl.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/main/definitions/update_file.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/mongodb/files/default/mms.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/mongodb/recipes/install_mms.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/mongodb/templates/default/mongoid_v2.yml.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/mongodb/templates/default/mongoid_v3.yml.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/newrelic_server_monitoring/attributes/newrelic.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/newrelic_server_monitoring/recipes/default.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/newrelic_server_monitoring/templates/default/nrsysmond.cfg.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/papertrail/recipes/default.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/papertrail/templates/default/log_files.yml.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/papertrail/templates/default/remote_syslog.confd.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/papertrail/templates/default/remote_syslog.initd.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/papertrail/templates/default/syslog-ng.conf.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/php/recipes/default.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/php/recipes/ini_setup.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/php/recipes/nginx.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/php/templates/default/php.ini.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/attributes/recipe.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/btree_gin.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/btree_gist.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/dict_int.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/dict_xsyn.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/file_fdw.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/intarray.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/load_shared_library.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/load_sql_file.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/postgis.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/sslinfo.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/test_parser.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/xml2.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/recipes/ext_postgis_install.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/templates/default/custom.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/rds/attributes/rds.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/rds/recipes/default.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/rds/templates/default/database.yml.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/redis-yml/recipes/default.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/redis-yml/templates/default/redis.yml.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/redis/attributes/redis.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/resque-scheduler/recipes/default.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/resque-scheduler/templates/default/resque-scheduler.monitrc.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/shared_db/metadata.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/shared_db/recipes/default.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/timezone/recipes/default.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/varnish_frontend/recipes/default.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/varnish_frontend/templates/default/app.vcl.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/varnish_frontend/templates/default/motd.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/varnish_frontend/templates/default/varnishd.monitrc.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookbooks/varnish_frontend/templates/default/varnishd_wrapper.erb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.rvmrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/attributes/recipe.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/definitions/intagg.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/definitions/load_shared_library.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/definitions/load_sql_file.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/definitions/postgis.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/recipes/ext_postgis_install.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/redis/README.rdoc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riak/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riak/attributes/riak.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riak/definitions/s3_forceinstall.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riak/definitions/s3_install.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riak/libraries/ruby_block.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riak/libraries/run_for_app.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riak/recipes/app_config.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riak/recipes/basho_bench.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riak/recipes/configure_riak.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riak/recipes/default.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riak/recipes/haproxy.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riak/recipes/install_riak.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riak/recipes/join_ring.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riak/recipes/setuptools.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riak/recipes/start_riak.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riak/templates/default/app.config.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riak/templates/default/haproxy.cfg.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riak/templates/default/haproxy_monitrc.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riak/templates/default/ripple.yml.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riak/templates/default/vm.args.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riaksearch/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riaksearch/attributes/riaksearch.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riaksearch/definitions/s3_forceinstall.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riaksearch/definitions/s3_install.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riaksearch/libraries/ruby_block.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riaksearch/libraries/run_for_app.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riaksearch/recipes/app_config.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riaksearch/recipes/basho_bench.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riaksearch/recipes/configure_riak.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riaksearch/recipes/default.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riaksearch/recipes/haproxy.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riaksearch/recipes/install_riak.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riaksearch/recipes/join_ring.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riaksearch/recipes/setuptools.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riaksearch/recipes/start_riak.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riaksearch/templates/default/app.config.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riaksearch/templates/default/haproxy.cfg.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riaksearch/templates/default/haproxy_monitrc.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riaksearch/templates/default/ripple.yml.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookbooks/riaksearch/templates/default/vm.args.erb" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/README.md" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/definitions/auto_explain.rb" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/auto_explain.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/definitions/chkpass.rb" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/chkpass.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/definitions/citext.rb" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/citext.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/definitions/cube.rb" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/cube.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/definitions/dblink.rb" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/dblink.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/definitions/earthdistance.rb" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/earthdistance.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/definitions/fuzzystrmatch.rb" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/fuzzystrmatch.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/definitions/hstore.rb" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/hstore.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/definitions/isn.rb" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/isn.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/definitions/lo.rb" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/lo.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/definitions/ltree.rb" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/ltree.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/definitions/pg_buffercache.rb" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/pg_buffercache.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/definitions/pg_freespacemap.rb" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/pg_freespacemap.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/definitions/pg_trgm.rb" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/pg_trgm.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/definitions/pgcrypto.rb" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/pgcrypto.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/definitions/pgrowlocks.rb" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/pgrowlocks.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/definitions/seg.rb" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/seg.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/definitions/tablefunc.rb" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/tablefunc.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/definitions/unaccent.rb" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/unaccent.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/definitions/uuid-ossp.rb" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/definitions/uuid-ossp.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/recipes/ext_autoexplain.rb" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/recipes/ext_autoexplain.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/templates/default/custom.erb" afterPath="$PROJECT_DIR$/cookbooks/mongodb/recipes/cleanup.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cookbooks/postgresql9_contrib/templates/default/custom_autoexplain.erb" afterPath="$PROJECT_DIR$/cookbooks/postgresql9_extensions/templates/default/custom_autoexplain.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/delayed_job/README.markdown" afterPath="$PROJECT_DIR$/cookbooks/delayed_job/README.markdown" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/elasticsearch/README.md" afterPath="$PROJECT_DIR$/cookbooks/elasticsearch/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/memcached/README.md" afterPath="$PROJECT_DIR$/cookbooks/memcached/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/mongodb/README.md" afterPath="$PROJECT_DIR$/cookbooks/mongodb/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/sphinx/README.md" afterPath="$PROJECT_DIR$/cookbooks/sphinx/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/delayed_job/recipes/default.rb" afterPath="$PROJECT_DIR$/cookbooks/delayed_job/recipes/default.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/delayed_job/templates/default/dj.monitrc.erb" afterPath="$PROJECT_DIR$/cookbooks/delayed_job/templates/default/dj.monitrc.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/elasticsearch/attributes/elasticsearch.rb" afterPath="$PROJECT_DIR$/cookbooks/elasticsearch/attributes/elasticsearch.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/elasticsearch/templates/default/elasticsearch.in.sh.erb" afterPath="$PROJECT_DIR$/cookbooks/elasticsearch/templates/default/elasticsearch.in.sh.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/emacs/recipes/default.rb" afterPath="$PROJECT_DIR$/cookbooks/emacs/recipes/default.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/emerge/definitions/enable_package.rb" afterPath="$PROJECT_DIR$/cookbooks/emerge/definitions/enable_package.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/exim/templates/default/exim.conf.erb" afterPath="$PROJECT_DIR$/cookbooks/exim/templates/default/exim.conf.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/jruby/recipes/default.rb" afterPath="$PROJECT_DIR$/cookbooks/jruby/recipes/default.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/main/recipes/default.rb" afterPath="$PROJECT_DIR$/cookbooks/main/recipes/default.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/memcached/templates/default/memcached.yml.erb" afterPath="$PROJECT_DIR$/cookbooks/memcached/templates/default/memcached.yml.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/mongodb/attributes/recipe.rb" afterPath="$PROJECT_DIR$/cookbooks/mongodb/attributes/recipe.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/mongodb/recipes/app.rb" afterPath="$PROJECT_DIR$/cookbooks/mongodb/recipes/app.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/mongodb/recipes/configure.rb" afterPath="$PROJECT_DIR$/cookbooks/mongodb/recipes/configure.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/mongodb/recipes/default.rb" afterPath="$PROJECT_DIR$/cookbooks/mongodb/recipes/default.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/mongodb/recipes/install.rb" afterPath="$PROJECT_DIR$/cookbooks/mongodb/recipes/install.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/mongodb/recipes/replset.rb" afterPath="$PROJECT_DIR$/cookbooks/mongodb/recipes/replset.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/mongodb/templates/default/mongodb.conf.erb" afterPath="$PROJECT_DIR$/cookbooks/mongodb/templates/default/mongodb.conf.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/redis/recipes/default.rb" afterPath="$PROJECT_DIR$/cookbooks/redis/recipes/default.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/redis/templates/default/redis.conf.erb" afterPath="$PROJECT_DIR$/cookbooks/redis/templates/default/redis.conf.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/resque/recipes/default.rb" afterPath="$PROJECT_DIR$/cookbooks/resque/recipes/default.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/solr/recipes/default.rb" afterPath="$PROJECT_DIR$/cookbooks/solr/recipes/default.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/sphinx/recipes/default.rb" afterPath="$PROJECT_DIR$/cookbooks/sphinx/recipes/default.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/sphinx/templates/default/sphinx.monitrc.erb" afterPath="$PROJECT_DIR$/cookbooks/sphinx/templates/default/sphinx.monitrc.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/sphinx/templates/default/sphinx.yml.erb" afterPath="$PROJECT_DIR$/cookbooks/sphinx/templates/default/sphinx.yml.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/ssmtp/recipes/default.rb" afterPath="$PROJECT_DIR$/cookbooks/ssmtp/recipes/default.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbooks/sunspot/recipes/default.rb" afterPath="$PROJECT_DIR$/cookbooks/sunspot/recipes/default.rb" />
+    </list>
+    <ignored path="ey-cloud-recipes.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="4" />
+    <option name="y" value="22" />
+    <option name="width" value="1276" />
+    <option name="height" value="778" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ey-cloud-recipes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Confirmation" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+  </component>
+  <component name="PublishConfig">
+    <servers>
+      <server id="b7f2f836-cbc7-4d44-a7d6-cf2b43be9ec0">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+    </servers>
+  </component>
+  <component name="RunManager">
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <created>1352756932165</created>
+      <updated>1352756932165</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="4" y="22" width="1276" height="778" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32892805" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2495935" sideWeight="0.67107195" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
+    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
+    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
+    <option name="ACTIVE_VCS_NAME" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
+    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+</project>
+

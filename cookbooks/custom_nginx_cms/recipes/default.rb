@@ -9,7 +9,7 @@ if ['app_master','app'].include?(node[:instance_role])
 		  command "sed -i -e 's/include \/etc\/nginx\/servers\/\*\.conf;/ \
 					 include \/etc\/nginx\/servers\/cms\.conf; \
 					 include \/etc\/nginx\/servers\/cms_beta\.conf; \
-					 /g' nginx.conf"
+					 /g' /data/nginx/nginx.conf"
 		  contents = File.read('/etc/nginx/nginx.conf')					 
 		  Chef::Log.info contents
 		  Chef::Log.info "hopefuly updated nginx.conf"

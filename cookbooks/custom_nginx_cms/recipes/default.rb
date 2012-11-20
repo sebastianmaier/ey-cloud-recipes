@@ -7,11 +7,11 @@ if ['app_master','app'].include?(node[:instance_role])
 	if File.exist?("/data/nginx/nginx.conf")
 		execute "update nginx.conf" do
 		  command "sed -i -e 's/include \/etc\/nginx\/servers\/\*\.conf;/ test123 /g' /data/nginx/nginx.conf"
-		  Chef::Log.info returns
+		  Chef::Log.info "hopefuly updated nginx.conf"
 		  contents = File.read('/data/nginx/nginx.conf')					 
 		  Chef::Log.info contents
+
 		  command "/etc/init.d/nginx restart"
-		  action :run
 		end
 	end
 end

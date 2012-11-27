@@ -22,6 +22,7 @@ else
     require_recipe "mongodb::install"
     require_recipe "mongodb::configure"
     require_recipe "mongodb::start"
+    require_recipe "mongodb::backup"
 
     if @node[:mongo_replset]
       require_recipe "mongodb::replset"

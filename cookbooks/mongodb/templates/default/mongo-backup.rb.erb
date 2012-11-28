@@ -38,7 +38,9 @@ end
 
 @databases.each do |database|
   db = MongoClient.new("127.0.0.1").db(database)
-  db.collection_names.each do |collection|  
+  collections = db.collection_names
+  @keep = 10 * collections.length
+  collections.each do |collection|  
     token = "#{database}-#{collection}"
     mongocmd = "mongodump -h 127.0.0.1 -d #{database} -c #{collection} -u #{@dbuser} -p #{@dbpass} -o /mnt/tmp/#{token}.#{@tmpname} && tar cjf \"/mnt/tmp/#{token}.#{@tmpname}.tar.bz\" \"/mnt/tmp/#{token}.#{@tmpname}\""
     if system(mongocmd)

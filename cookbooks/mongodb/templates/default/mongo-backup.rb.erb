@@ -2,10 +2,13 @@
 
 require 'rubygems'
 require 'aws/s3'
+require 'mongo'
 require 'date'
 require 'digest'
 require 'net/http'
 require 'fileutils'
+
+include Mongo
 
 module AWS::S3
   class S3Object
@@ -24,7 +27,6 @@ AWS::S3::Base.establish_connection!(
 @databases = ['<%= @database %>']
 @environment = '<%= @env %>'
 @app_name = '<%= @app_name %>'
-@collections = [ 'system.indexes', 'system.users', 'keywords', 'training_programs', 'segments', 'transcripts', 'media_file_data' ]
 @keep = 10 * @collections.length
 @bucket = "ey-backup-#{Digest::SHA1.hexdigest('<%= @id_key %>')[0..11]}-mongo"
 @tmpname = "#{Time.now.strftime("%Y-%m-%dT%H:%M:%S").gsub(/:/, '-')}"
@@ -35,7 +37,8 @@ rescue AWS::S3::BucketAlreadyExists
 end
 
 @databases.each do |database|
-  @collections.each do |collection|
+  db = MongoClient.new("127.0.0.1").db(database)
+  db.collection_names.each do |collection|  
     token = "#{database}-#{collection}"
     mongocmd = "mongodump -h 127.0.0.1 -d #{database} -c #{collection} -u #{@dbuser} -p #{@dbpass} -o /mnt/tmp/#{token}.#{@tmpname} && tar cjf \"/mnt/tmp/#{token}.#{@tmpname}.tar.bz\" \"/mnt/tmp/#{token}.#{@tmpname}\""
     if system(mongocmd)

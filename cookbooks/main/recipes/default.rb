@@ -79,7 +79,7 @@ require_recipe "mongodb"
 #enable dev libxml2
 require_recipe "libxml_dev"
 require_recipe "custom_haproxy_config"
-require_recipe "custom_nginx_cms"
+#require_recipe "custom_nginx_cms"
 
 # To install specific plugins to Elasticsearch see below as an example
 #es_plugin "cloud-aws" do

@@ -13,15 +13,16 @@ if ['solo', 'util'].include?(node[:instance_role])
       not_if { "gem list | grep resque" }
     end
 
-    case node[:ec2][:instance_type]
-    when 'm1.small' then worker_count = 2
-    when 'c1.medium'then worker_count = 3
-    when 'c1.xlarge' then worker_count = 8
-    else worker_count = 4
-    end
+    # case node[:ec2][:instance_type]
+    # when 'm1.small' then worker_count = 2
+    # when 'c1.medium'then worker_count = 3
+    # when 'c1.xlarge' then worker_count = 8
+    # else worker_count = 4
+    # end
+    worker_count = 2
 
-
-    node[:applications].each do |app, data|
+    #node[:applications].each do |app, data|
+      app = "cms"
       template "/etc/monit.d/resque_#{app}.monitrc" do
         owner 'root' 
         group 'root' 
@@ -49,6 +50,6 @@ if ['solo', 'util'].include?(node[:instance_role])
         monit reload 
         } 
       end
-    end
+    #end
   end 
 end

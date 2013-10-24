@@ -21,7 +21,7 @@ if ['solo', 'util'].include?(node[:instance_role])
     # end
     worker_count = 2
 
-    #node[:applications].each do |app, data|
+    node[:applications].each do |app, data|
       app = "cms"
       template "/etc/monit.d/resque_#{app}.monitrc" do
         owner 'root' 
@@ -50,6 +50,6 @@ if ['solo', 'util'].include?(node[:instance_role])
         monit reload 
         } 
       end
-    #end
+    end
   end 
 end

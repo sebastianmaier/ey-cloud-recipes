@@ -22,7 +22,7 @@ if ['solo', 'util'].include?(node[:instance_role])
     worker_count = 2
 
     node[:applications].each do |app, data|
-      app = "cms"
+      #app = "cms"
       template "/etc/monit.d/resque_#{app}.monitrc" do
         owner 'root' 
         group 'root' 

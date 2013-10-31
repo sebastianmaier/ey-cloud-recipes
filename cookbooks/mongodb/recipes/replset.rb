@@ -7,8 +7,8 @@ if @node[:mongo_replset]
 
   Chef::Log.info "Setting up Replica set: #{node[:mongo_replset]} \n mongo_nodes: #{mongo_nodes.inspect} \n executing on node #{@node[:name]}"
 
-  if (@node[:name].match(/_1$/) && (mongo_nodes.length >= 3 || (mongo_nodes.length ==2 && mongo_arbiter.length > 3)))
-    Chef::Log.info "setup replset js at least once" 
+  if (@node[:name].match(/_1$/) && (mongo_nodes.length == 3 || (mongo_nodes.length ==2 && mongo_arbiter.length > 3)))
+    #Chef::Log.info "setup replset js at least once" 
     setup_js = "#{node[:mongo_base]}/setup_replset.js"
 
     template setup_js do

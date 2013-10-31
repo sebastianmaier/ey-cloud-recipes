@@ -13,7 +13,7 @@ if @attribute["utility_instances"].empty?
 else
     if (@attribute[:instance_role] == 'util' && @attribute[:name].match(/^mongodb_repl/)) 
         mongo_replset ( @attribute["name"].sub("mongodb_repl","").split("_")[0] )
-        Chef::Log.info "Node is a member of a replica set #{@node[:mongo_replset]}"
+        #Chef::Log.info "Node is a member of a replica set #{@node[:mongo_replset]}"
     else
         mongo_replset( false )
     end

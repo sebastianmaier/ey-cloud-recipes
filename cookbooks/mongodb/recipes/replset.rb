@@ -23,6 +23,19 @@ if @node[:mongo_replset]
                })
     end
 
+    template reconf_js do
+      source "reconfig_replset.js.erb"
+      owner user[:username]
+      group user[:username]
+      mode '0755'
+      variables({ :mongo_replset => @node[:mongo_replset],
+                  :mongo_nodes => mongo_nodes,
+                  :mongo_port => @node[:mongo_port],
+                  :mongo_arbiter => mongo_arbiter
+               })
+    end
+
+
     #----- wait for set members to be up and initialize -----
      mongo_nodes.each do |mongo_node|
       execute "wait for mongo on #{mongo_node[:hostname]} to come up" do

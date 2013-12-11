@@ -23,7 +23,7 @@ if @node[:mongo_replset]
                })
     end
 
-    template reconf_js do
+    template "#{node[:mongo_base]}/reconfig_replset.js" do
       source "reconfig_replset.js.erb"
       owner user[:username]
       group user[:username]

@@ -18,8 +18,8 @@ if node[:utility_instances].empty?
       owner user[:username]
       group user[:username]
       mode 0755
-
-      if @node[:instance_role] == "solo" && @node[:mongo_utility_instances].length == 0
+      
+      if @node[:instance_role] == "solo" && @node[:mongo_utility_instances].length == 0 || (@node[:instance_role] == "app_master" &&  @node[:mongo_utility_instances].length == 0)
         variables(:yaml_file => {
           node[:environment][:framework_env] => {
             :hosts => [ [ "localhost", @node[:mongo_port].to_i ] ] } } )
@@ -32,7 +32,7 @@ if node[:utility_instances].empty?
       end
     end
 
-    #Mongoid.yml_v3
+    #Mongoid.yml_v2
     template "/data/#{mongo_app_name}/shared/config/mongoid.yml" do
       source "mongoid_v2.yml.erb"
       owner user[:username]

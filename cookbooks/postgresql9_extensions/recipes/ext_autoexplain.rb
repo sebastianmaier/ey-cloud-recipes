@@ -12,6 +12,7 @@ template "#{@node[:postgres_root]}#{@node[:postgres_version]}/custom_autoexplain
   mode 0600
   backup 0
   variables({
+    :db_version => @node[:postgres_version],
     :shared_preload_libraries => "'auto_explain'",
     :custom_variable_classes => "'auto_explain'",
     :auto_explain_log_min_duration => "'3s'",
@@ -24,6 +25,6 @@ template "#{@node[:postgres_root]}#{@node[:postgres_version]}/custom_autoexplain
 end
 
 execute "restarting postgres service" do
-  command "/etc/init.d/postgresql-#{@node[:postgres_version]} restart"
+  command "/etc/init.d/postgresql-#{@node[:postgres_version]} reload"
 end
 

@@ -10,10 +10,10 @@ end
 mongo_nodes = @node[:utility_instances].select { |instance| instance[:name].match(/^mongodb_repl#{@node[:mongo_replset]}/) }
 if @node[:name] == mongo_nodes.last[:name]
 
-    gem_package "aws-sdk" do
+    chef_gem "aws-sdk" do
       source "http://rubygems.org"
       action :install
-    end  
+    end
 
 #  node[:applications].each do |app_name, data|
     app_name = "cms"

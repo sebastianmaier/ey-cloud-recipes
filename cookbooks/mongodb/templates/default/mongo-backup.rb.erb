@@ -11,7 +11,7 @@ module AWS
   class S3
     class S3Object
       def <=>(other)
-        DateTime.parse(self.last_modified) <=> DateTime.parse(other.last_modified)
+        self.last_modified <=> other.last_modified
       end
     end
   end
@@ -38,7 +38,7 @@ if @ismaster == "false" #only dump non-primary nodes
     token = "#{database}"
     mongocmd = "mongodump -h 127.0.0.1 -d #{database} -o /mnt/tmp/#{token}.#{@tmpname} && tar cjf \"/mnt/tmp/#{token}.#{@tmpname}.tar.bz\" \"/mnt/tmp/#{token}.#{@tmpname}\""
     if system(mongocmd)
-      @s3.buckets[@bucket].objects["/#{@environment}.#{@app_name}/#{@app_name}-#{token}.#{@tmpname}.bson.tar.bz"].write(:file => open("/mnt/tmp/#{token}.#{@tmpname}.tar.bz"))
+      @s3.buckets[@bucket].objects["#{@environment}.#{@app_name}/#{@app_name}-#{token}.#{@tmpname}.tar.bz"].write(:file => open("/mnt/tmp/#{token}.#{@tmpname}.tar.bz"))
       FileUtils.rm "/mnt/tmp/#{token}.#{@tmpname}.tar.bz"
       FileUtils.rm_r "/mnt/tmp/#{token}.#{@tmpname}"
       puts "successful backup: #{database}.#{@tmpname}"

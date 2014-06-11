@@ -10,9 +10,9 @@ end
 mongo_nodes = @node[:utility_instances].select { |instance| instance[:name].match(/^mongodb_repl#{@node[:mongo_replset]}/) }
 if @node[:name] == mongo_nodes.last[:name]
 
-    chef_gem "aws-sdk" do
-      source "http://rubygems.org"
-      action :install
+    execute "install aws-sdk gem" do
+      command "gem install aws-sdk -r"
+      not_if { "gem list | grep aws-sdk" }
     end
 
 #  node[:applications].each do |app_name, data|

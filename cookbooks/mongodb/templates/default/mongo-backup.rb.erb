@@ -11,7 +11,7 @@ module AWS
   class S3
     class S3Object
       def <=>(other)
-        DateTime.parse(self.about['last-modified']) <=> DateTime.parse(other.about['last-modified'])
+        DateTime.parse(self.last_modified) <=> DateTime.parse(other.last_modified)
       end
     end
   end
